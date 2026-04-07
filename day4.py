@@ -187,4 +187,91 @@
 # f.close()
 # print("file.closed: ", f.closed)
 
+# f = open("myfile.txt", "a")
+# f.write("\n sawantwadi is smart city")
+# f.close()
+# print("file opration is done")
 
+# f = open("myfile.txt", "w")
+# mylist =["prashant","mahesh","suresh"]
+# mytuple =("prashant","mahesh","suresh")
+
+# f.writelines(mylist)
+# f.writelines(mytuple)
+
+# f.close()
+# print("written work has done succesfully")
+# print("file opration is done")
+
+# f = open("myfile.txt","r")
+# print(f.read())
+# f.close()
+
+# with open("myfile.txt","w") as f:
+#     f.write("amit\n")
+#     f.write("ashish\n")
+#     f.write("prashant\n")
+#     print("file closed:",f.closed)
+# print("file closed:",f.closed)
+
+# with open("myfile.txt","r") as f:
+#     content = f.read()
+#     print(content)
+
+
+# f1 = open ("134080861660368200.jpg","rb")
+# f2 = open ("demo.jpg","wb")
+# data = f1.read()
+# f2.write(data)
+# print("new image is available with name:")
+
+# import csv
+# f = open ("student.csv","a",newline="")
+# a = csv.writer(f)
+# # a.writerow(["studentID","rollno","name","mobileno"])
+
+# studentid= int(input("Enter student id:"))
+# rollno = int(input("Enter your roll no:"))
+# name= input("enter your name:")
+# mobileno= int(input("Enter your mobile no:"))
+# a.writerow([studentid,rollno,name,mobileno])
+# print("student records has saved")
+
+# import csv
+# f = open ("newfile.csv","a",newline="")
+# a = csv.writer(f)
+# a.writerow(["rollno","name","mobileno","p1","p2","p3","total","percentage","email","result"])
+
+# rollno = int(input("Enter your roll no:"))
+# name= input("enter your name:")
+# mobileno= int(input("Enter your mobile no:"))
+# p1 = int(input("enter value of p1:"))
+# p2 = int(input("enter value of p2:"))
+# p3 = int(input("enter value of p3:"))
+
+# email = input("enter email:")
+# total = p1+p2+p3
+# percentage = total /3
+# a.writerow(["rollno","name","mobileno","p1","p2","p3","total","percentage","email","result"])
+# print("student records has saved")
+
+import csv
+f = open("student.csv", "a", newline = "")
+a = csv.writer(f)
+a.writerow(["studentID","rollno","name","mobileno","email","marks1","marks2","marks3","total","percentage","result"])
+studentid = int(input("enter the studentID:"))
+rollno = int(input("enter the rollno:"))
+name = input("enter the name:")
+mobileno = int(input("enter the mobileno:"))
+email = input("enter the email:")
+marks1 = int(input("enter the marks1:"))
+marks2 = int(input("enter the marks2:"))
+marks3 = int(input("enter the marks3:"))
+percentage = (marks1+marks2+marks3)/3
+if percentage >= 40:
+    result = "pass"
+else:
+    result = "fail"
+    
+a.writerow([studentid,rollno,name,mobileno,email,marks1,marks2,marks3,marks1+marks2+marks3,percentage,result])
+print("student record has save")
